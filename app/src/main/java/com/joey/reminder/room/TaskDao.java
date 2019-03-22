@@ -1,5 +1,8 @@
 package com.joey.reminder.room;
 
+import java.util.List;
+
+import androidx.lifecycle.LiveData;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -7,7 +10,7 @@ import androidx.room.Update;
 
 public interface TaskDao {
     @Insert
-    void insert(Task...tasks);
+    void insert(Task task);
 
     @Update
     void update(Task task);
@@ -15,8 +18,8 @@ public interface TaskDao {
     @Delete
     void delete(Task task);
 
-    @Query("SELECT * FROM items")
-    void getAll();
+    @Query("SELECT * FROM items ORDER BY id")
+    LiveData<List<Task>> getAll();
 
     @Query("DELETE FROM items")
     void deleteAll();

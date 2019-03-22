@@ -1,23 +1,42 @@
 package com.joey.reminder.viewmodel;
 
+import android.app.Application;
+
 import com.joey.reminder.room.Task;
+import com.joey.reminder.repository.TaskRepository;
 
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
+import java.util.List;
 
-public class TaskViewModel extends ViewModel {
-    private Task myTask;
-    private MutableLiveData<Task> task;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 
-    public TaskViewModel() {
-        task = new MutableLiveData<>();
+public class TaskViewModel extends AndroidViewModel {
+    private TaskRepository taskRepository;
+    private LiveData<List<Task>> allTasks;
+
+    public TaskViewModel(Application application) {
+        super(application);
+        taskRepository = new TaskRepository(application);
+        allTasks = taskRepository.getAllTasks();
     }
 
-    public MutableLiveData<Task> getTask() {
-        return task;
+    LiveData<List<Task>> getAllTasks() {
+        return allTasks;
     }
 
-    public void setTask(MutableLiveData<Task> task) {
-        task.postValue(myTask);
+    public void insert(Task task) {
+        taskRepository.insert(task);
+    }
+
+    public void update(Task task) {
+        taskRepository.update(task);
+    }
+
+    public void delete(Task task) {
+        taskRepository.delete(task);
+    }
+
+    public void deleteAll() {
+        taskRepository.deleteAll();
     }
 }
