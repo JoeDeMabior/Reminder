@@ -1,8 +1,10 @@
-package com.joey.reminder;
+package com.joey.reminder.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.joey.reminder.R;
 
 public class MainActivity extends AppCompatActivity {
 
