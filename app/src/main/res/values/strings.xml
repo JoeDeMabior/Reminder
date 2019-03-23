@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Reminder</string>
+    <string name="thumbnail_image">Thumbnail image</string>
+    <string name="notifications">Notifications</string>
+    <string name="no_reminders">No Reminders</string>
+    <string name="title">Title</string>
+    <string name="details">Details</string>
+    <string name="date_and_time">Date and time</string>
+    <string name="add_reminder">Add Reminder</string>
+    <string name="date_icon">Date icon</string>
+    <string name="date">Date</string>
+    <string name="time_icon">Time icon</string>
+    <string name="time">Time</string>
+    <string name="repeat_icon">Repeat icon</string>
+    <string name="repeat">Repeat</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="repeat_no">Repeat no</string>
+    <string name="repeat_type">Repeat type</string>
 </resources>

@@ -23,6 +23,7 @@ public abstract class TaskDatabase extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             TaskDatabase.class,
                             TaskDatabase.DATABASE_NAME)
+                            .fallbackToDestructiveMigration()
                             .build();
                 }
             }
