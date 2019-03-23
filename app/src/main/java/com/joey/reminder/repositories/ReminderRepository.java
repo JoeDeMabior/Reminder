@@ -1,10 +1,10 @@
-package com.joey.reminder.repository;
+package com.joey.reminder.repositories;
 
 import android.app.Application;
 
-import com.joey.reminder.room.Reminder;
-import com.joey.reminder.room.ReminderDao;
-import com.joey.reminder.room.ReminderDatabase;
+import com.joey.reminder.databases.Reminder;
+import com.joey.reminder.databases.ReminderDao;
+import com.joey.reminder.databases.ReminderDatabase;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.joey.reminder.room;
+package com.joey.reminder.utils;
 
 import java.util.Date;
 

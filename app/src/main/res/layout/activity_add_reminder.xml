@@ -32,10 +32,12 @@
             android:layout_marginEnd="16dp"
             android:gravity="top|start"
             android:hint="@string/add_reminder"
-            android:inputType="textCapWords|textMultiLine"
+            android:inputType="textMultiLine"
             android:lines="4"
             android:maxLines="4"
-            android:scrollHorizontally="false" />
+            android:scrollHorizontally="false"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
 
     </LinearLayout>
 
@@ -55,7 +57,9 @@
                 android:layout_marginStart="72dp"
                 android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:hint="@string/details" />
+                android:hint="@string/details"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
 
             <RelativeLayout
                 android:id="@+id/date"
@@ -74,7 +78,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="32dp"
                     android:contentDescription="@string/date_icon"
-                    android:src="@drawable/ic_date" />
+                    android:src="@drawable/ic_date"
+                    android:textColor="@android:color/black" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -87,7 +92,8 @@
                         android:id="@+id/date_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/date" />
+                        android:text="@string/date"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/set_date"
@@ -115,7 +121,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="32dp"
                     android:contentDescription="@string/time_icon"
-                    android:src="@drawable/ic_access_time" />
+                    android:src="@drawable/ic_access_time"
+                    android:textColor="@android:color/black" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -128,7 +135,8 @@
                         android:id="@+id/time_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/time" />
+                        android:text="@string/time"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/set_time"
@@ -153,7 +161,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="32dp"
                     android:contentDescription="@string/repeat_icon"
-                    android:src="@drawable/ic_sync" />
+                    android:src="@drawable/ic_sync"
+                    android:textColor="@android:color/black" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -166,7 +175,8 @@
                         android:id="@+id/repeat_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/repeat" />
+                        android:text="@string/repeat"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/set_repeat"
@@ -207,7 +217,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="32dp"
                     android:contentDescription="@string/repeat_no"
-                    android:src="@drawable/ic_unfold_more" />
+                    android:src="@drawable/ic_unfold_more"
+                    android:textColor="@android:color/black" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -220,7 +231,8 @@
                         android:id="@+id/repeat_no_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/repeat_no" />
+                        android:text="@string/repeat_no"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/set_repeat_no"
@@ -248,7 +260,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="32dp"
                     android:contentDescription="@string/repeat_type"
-                    android:src="@drawable/ic_subject" />
+                    android:src="@drawable/ic_subject"
+                    android:textColor="@android:color/black" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -261,7 +274,8 @@
                         android:id="@+id/repeat_type_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/repeat_type" />
+                        android:text="@string/repeat_type"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/set_repeat_type"

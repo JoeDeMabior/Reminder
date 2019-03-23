@@ -1,9 +1,9 @@
-package com.joey.reminder.viewmodel;
+package com.joey.reminder.viewmodels;
 
 import android.app.Application;
 
-import com.joey.reminder.room.Reminder;
-import com.joey.reminder.repository.ReminderRepository;
+import com.joey.reminder.databases.Reminder;
+import com.joey.reminder.repositories.ReminderRepository;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class ReminderViewModel extends AndroidViewModel {
         allReminders = reminderRepository.getAllReminders();
     }
 
-    LiveData<List<Reminder>> getAllReminders() {
+    public LiveData<List<Reminder>> getAllReminders() {
         return allReminders;
     }
 

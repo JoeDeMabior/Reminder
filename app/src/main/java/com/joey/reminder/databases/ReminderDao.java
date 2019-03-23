@@ -1,4 +1,4 @@
-package com.joey.reminder.room;
+package com.joey.reminder.databases;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public interface ReminderDao {
     @Delete
     void delete(Reminder reminder);
 
-    @Query("SELECT * FROM tasks ORDER BY id")
+    @Query("SELECT * FROM tasks")
     LiveData<List<Reminder>> getAll();
 
     @Query("DELETE FROM tasks")

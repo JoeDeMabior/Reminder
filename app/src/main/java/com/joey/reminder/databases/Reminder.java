@@ -1,13 +1,17 @@
-package com.joey.reminder.room;
+package com.joey.reminder.databases;
+
+import com.joey.reminder.utils.DateConverter;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
 
 @Entity(tableName = "tasks")
 public class Reminder {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String title;
+    @TypeConverters(DateConverter.class)
     private String date;
     private String time;
     private String repeat;
