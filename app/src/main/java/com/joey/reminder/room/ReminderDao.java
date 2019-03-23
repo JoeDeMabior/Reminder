@@ -10,19 +10,19 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 @Dao
-public interface TaskDao {
+public interface ReminderDao {
     @Insert
-    void insert(Task task);
+    void insert(Reminder reminder);
 
     @Update
-    void update(Task task);
+    void update(Reminder reminder);
 
     @Delete
-    void delete(Task task);
+    void delete(Reminder reminder);
 
-    @Query("SELECT * FROM items ORDER BY id")
-    LiveData<List<Task>> getAll();
+    @Query("SELECT * FROM tasks ORDER BY id")
+    LiveData<List<Reminder>> getAll();
 
-    @Query("DELETE FROM items")
+    @Query("DELETE FROM tasks")
     void deleteAll();
 }

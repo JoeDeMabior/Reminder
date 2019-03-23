@@ -3,26 +3,26 @@ package com.joey.reminder.room;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "items")
-public class Task {
+@Entity(tableName = "tasks")
+public class Reminder {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String title;
     private String date;
     private String time;
     private String repeat;
-    private String repeat_no;
-    private String repeat_type;
+    private String repeatNo;
+    private String repeatType;
     private String active;
 
-    Task(int id, String title, String date, String time, String repeat, String repeat_no, String repeat_type, String active) {
+    Reminder(int id, String title, String date, String time, String repeat, String repeatNo, String repeatType, String active) {
         this.id = id;
         this.title = title;
         this.date = date;
         this.time = time;
         this.repeat = repeat;
-        this.repeat_no = repeat_no;
-        this.repeat_type = repeat_type;
+        this.repeatNo = repeatNo;
+        this.repeatType = repeatType;
         this.active = active;
     }
 
@@ -46,12 +46,12 @@ public class Task {
         return repeat;
     }
 
-    String getRepeat_no() {
-        return repeat_no;
+    String getRepeatNo() {
+        return repeatNo;
     }
 
-    String getRepeat_type() {
-        return repeat_type;
+    String getRepeatType() {
+        return repeatType;
     }
 
     String getActive() {

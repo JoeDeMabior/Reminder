@@ -7,22 +7,22 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-@Database(entities = {Task.class}, version = 1)
+@Database(entities = {Reminder.class}, version = 1, exportSchema = false)
 @TypeConverters(DateConverter.class)
-public abstract class TaskDatabase extends RoomDatabase {
+public abstract class ReminderDatabase extends RoomDatabase {
 
-    public abstract TaskDao taskDao();
+    public abstract ReminderDao reminderDao();
 
-    private static volatile TaskDatabase INSTANCE;
+    private static volatile ReminderDatabase INSTANCE;
     private static final String DATABASE_NAME = "reminders";
 
-    public static TaskDatabase getInstance(Context context) {
+    public static ReminderDatabase getInstance(Context context) {
         if (INSTANCE == null) {
-            synchronized (TaskDatabase.class) {
+            synchronized (ReminderDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            TaskDatabase.class,
-                            TaskDatabase.DATABASE_NAME)
+                            ReminderDatabase.class,
+                            ReminderDatabase.DATABASE_NAME)
                             .fallbackToDestructiveMigration()
                             .build();
                 }
