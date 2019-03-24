@@ -15,6 +15,6 @@
     <string name="repeat">Repeat</string>
     <string name="on">On</string>
     <string name="off">Off</string>
-    <string name="repeat_no">Repeat no</string>
-    <string name="repeat_type">Repeat type</string>
+    <string name="repeat_no">Repeat No</string>
+    <string name="repeat_type">Repeat Type</string>
 </resources>

@@ -30,9 +30,9 @@ public class AddReminderActivity extends AppCompatActivity {
     public void selectRepeatType(View view) {
     }
 
-    public void selectFab1(View view) {
+    public void setNotificationOff(View view) {
     }
 
-    public void selectFab2(View view) {
+    public void setNotificationOn(View view) {
     }
 }

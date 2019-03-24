@@ -12,7 +12,7 @@ import androidx.lifecycle.LiveData;
 
 public class ReminderViewModel extends AndroidViewModel {
     private ReminderRepository reminderRepository;
-    private LiveData<List<Reminder>> allReminders;
+    public LiveData<List<Reminder>> allReminders;
 
     public ReminderViewModel(Application application) {
         super(application);

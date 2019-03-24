@@ -12,16 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <LinearLayout
         android:id="@+id/add_reminder"
         android:layout_width="match_parent"
-        android:layout_height="148dp"
+        android:layout_height="150dp"
         android:layout_below="@id/toolbar"
-        android:orientation="vertical"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/heading"
@@ -35,7 +34,8 @@
             android:inputType="textMultiLine"
             android:lines="4"
             android:maxLines="4"
-            android:scrollHorizontally="false" />
+            android:scrollHorizontally="false"
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
 
@@ -55,7 +55,7 @@
                 android:layout_marginStart="72dp"
                 android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:hint="@string/details"
+                android:text="@string/details"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
 
@@ -289,7 +289,7 @@
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/starred1"
+        android:id="@+id/notification_off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -298,11 +298,11 @@
         android:layout_marginTop="168dp"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="selectFab1"
+        android:onClick="setNotificationOff"
         android:src="@drawable/ic_notifications_off" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/starred2"
+        android:id="@+id/notification_on"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -311,7 +311,7 @@
         android:layout_marginTop="168dp"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="selectFab2"
+        android:onClick="setNotificationOn"
         android:src="@drawable/ic_notifications_active" />
 
 </RelativeLayout>

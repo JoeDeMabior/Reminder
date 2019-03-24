@@ -10,16 +10,17 @@ import android.widget.TextView;
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.joey.reminder.R;
-import com.joey.reminder.models.ReminderItem;
+import com.joey.reminder.databases.Reminder;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ReminderViewHolder> {
     private LayoutInflater inflater;
-    private ArrayList<ReminderItem> items = new ArrayList<>();
+    private List<Reminder> reminders = new ArrayList<>();
 
     public ReminderAdapter(Context context) {
         inflater = LayoutInflater.from(context);
@@ -34,33 +35,26 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
 
     @Override
     public void onBindViewHolder(@NonNull ReminderViewHolder holder, int position) {
-        ReminderItem item = items.get(position);
-        holder.setReminderTitle(item.title);
-        holder.setReminderDateTime(item.dateTime);
-        holder.setReminderRepeatInfo(item.repeat, item.repeatNo, item.repeatType);
-        holder.setActiveImage(item.active);
+        Reminder reminder = reminders.get(position);
+        holder.setReminderTitle(reminder.getTitle());
+        holder.setReminderDate(reminder.getDate());
+        holder.setReminderTime(reminder.getTime());
+        holder.setReminderRepeatInfo(reminder.getRepeat(), reminder.getRepeatNo(), reminder.getRepeatType());
+        holder.setActiveImage(reminder.getActive());
     }
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return reminders.size();
     }
 
-    public void setItemCount(ArrayList<ReminderItem> items) {
-        this.items = items;
+    public void setReminders(List<Reminder> reminders) {
+        this.reminders = reminders;
         notifyDataSetChanged();
     }
 
-    public void removeItemSelected(int selected) {
-        if (items.isEmpty()) {
-            return;
-        }
-        items.remove(selected);
-        notifyItemRemoved(selected);
-    }
-
     class ReminderViewHolder extends RecyclerView.ViewHolder {
-        private TextView titleText, dateTimeText, repeatInfoText;
+        private TextView titleText, dateText, timeText, repeatInfoText;
         private ImageView thumbnailImage, activeImage;
         private TextDrawable textDrawable;
         private ColorGenerator colorGenerator = ColorGenerator.DEFAULT;
@@ -70,7 +64,8 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
 
             thumbnailImage = itemView.findViewById(R.id.thumbnail_image);
             titleText = itemView.findViewById(R.id.title);
-            dateTimeText = itemView.findViewById(R.id.date_time);
+            dateText = itemView.findViewById(R.id.date);
+            timeText = itemView.findViewById(R.id.time);
             repeatInfoText = itemView.findViewById(R.id.repeat_info);
             activeImage = itemView.findViewById(R.id.active_image);
         }
@@ -90,8 +85,12 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
             thumbnailImage.setImageDrawable(textDrawable);
         }
 
-        void setReminderDateTime(String dateTime) {
-            dateTimeText.setText(dateTime);
+        void setReminderDate(String date) {
+            dateText.setText(date);
+        }
+
+        void setReminderTime(String time) {
+            timeText.setText(time);
         }
 
         void setReminderRepeatInfo(String repeat, String repeatNo, String repeatType) {

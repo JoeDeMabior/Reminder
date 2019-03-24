@@ -34,31 +34,63 @@ public class Reminder {
         return id;
     }
 
-    String getTitle() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
         return title;
     }
 
-    String getDate() {
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDate() {
         return date;
     }
 
-    String getTime() {
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
         return time;
     }
 
-    String getRepeat() {
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getRepeat() {
         return repeat;
     }
 
-    String getRepeatNo() {
+    public void setRepeat(String repeat) {
+        this.repeat = repeat;
+    }
+
+    public String getRepeatNo() {
         return repeatNo;
     }
 
-    String getRepeatType() {
+    public void setRepeatNo(String repeatNo) {
+        this.repeatNo = repeatNo;
+    }
+
+    public String getRepeatType() {
         return repeatType;
     }
 
-    String getActive() {
+    public void setRepeatType(String repeatType) {
+        this.repeatType = repeatType;
+    }
+
+    public String getActive() {
         return active;
+    }
+
+    public void setActive(String active) {
+        this.active = active;
     }
 }
