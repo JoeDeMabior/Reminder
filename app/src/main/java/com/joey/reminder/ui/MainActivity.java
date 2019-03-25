@@ -29,7 +29,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import es.dmoral.toasty.Toasty;
 
 public class MainActivity extends AppCompatActivity {
-    Toolbar toolbar;
     private TextView noReminders;
 
     private ReminderViewModel reminderViewModel;
@@ -41,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle(R.string.app_name);
+
         noReminders = findViewById(R.id.no_reminders);
 
         reminderViewModel = ViewModelProviders.of(this).get(ReminderViewModel.class);

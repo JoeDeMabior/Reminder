@@ -64,6 +64,7 @@ public class AddReminderActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_add_reminder);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         toolbar.setTitle(R.string.add_reminder);
 
         titleText = findViewById(R.id.heading);
