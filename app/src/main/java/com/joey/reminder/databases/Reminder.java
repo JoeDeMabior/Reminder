@@ -19,8 +19,7 @@ public class Reminder {
     private String repeatType;
     private String active;
 
-    Reminder(int id, String title, String date, String time, String repeat, String repeatNo, String repeatType, String active) {
-        this.id = id;
+    public Reminder(String title, String date, String time, String repeat, String repeatNo, String repeatType, String active) {
         this.title = title;
         this.date = date;
         this.time = time;

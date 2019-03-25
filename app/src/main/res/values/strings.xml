@@ -17,4 +17,7 @@
     <string name="off">Off</string>
     <string name="repeat_no">Repeat No</string>
     <string name="repeat_type">Repeat Type</string>
+    <string name="discard">Discard</string>
+    <string name="save">Save</string>
+    <string name="delete_all">Delete all</string>
 </resources>
